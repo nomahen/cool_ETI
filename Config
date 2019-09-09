@@ -1,0 +1,103 @@
+# Config file for the cool module
+
+# cool/radloss
+
+D useCool  Runtime control for turning off cooling
+PARAMETER useCool  BOOLEAN FALSE
+
+D maxCoolFactor  Maximum fraction of internal energy we can remove. Limits timestep 
+PARAMETER maxCoolFactor REAL 1.d-1
+
+D coolMode whether to use built-in cooling function (default) or user-defined (user). 
+PARAMETER coolMode STRING "default" ["default","user"]
+
+D coolDelay delay time until turning cooling on
+PARAMETER coolDelay REAL 1.d0
+
+D tfloor minimum temperater (Kelvin)
+PARAMETER tfloor REAL 8.d3
+
+D NKO: The following parameters (tempBound_,tempNorm_,tempExp_)
+D & are declared to make this code general and only need changing if
+D & you are using a user-defined piecewise polynomial fit. If you use
+D & more than 20 segments to your piecewise function, you will need to
+D & add more of the following parameters accordingly.
+
+D tempBound_ Boundaries for piecewise polynomial fit in Kelvin
+D & up to 21 boundaries available. If <21 boundaries used, leave unused
+D & boundaries as -1. Boundaries must be used sequentially.
+D & Must have 1 more boundary than normalizations / power laws
+PARAMETER tempBound_1 REAL -100
+PARAMETER tempBound_2 REAL -100
+PARAMETER tempBound_3 REAL -100
+PARAMETER tempBound_4 REAL -100
+PARAMETER tempBound_5 REAL -100
+PARAMETER tempBound_6 REAL -100
+PARAMETER tempBound_7 REAL -100
+PARAMETER tempBound_8 REAL -100
+PARAMETER tempBound_9 REAL -100
+PARAMETER tempBound_10 REAL -100
+PARAMETER tempBound_11 REAL -100
+PARAMETER tempBound_12 REAL -100
+PARAMETER tempBound_13 REAL -100
+PARAMETER tempBound_14 REAL -100
+PARAMETER tempBound_15 REAL -100
+PARAMETER tempBound_16 REAL -100
+PARAMETER tempBound_17 REAL -100
+PARAMETER tempBound_18 REAL -100
+PARAMETER tempBound_19 REAL -100
+PARAMETER tempBound_20 REAL -100
+PARAMETER tempBound_21 REAL -100
+
+D tempNorm_ NKO: Normalizations for piecewise polynomial fit in units
+D & of emissivity in cgs (ergs cm^3 / s). Up to 20 normalizations
+D & available for each segment. Must have equal number of normalizations
+D & to power laws and 1 less than the number of boundaries. If <20
+D & normalizations used, leave as -100. Normalizations must be used sequentially.
+PARAMETER tempNorm_1 REAL -100
+PARAMETER tempNorm_2 REAL -100
+PARAMETER tempNorm_3 REAL -100
+PARAMETER tempNorm_4 REAL -100
+PARAMETER tempNorm_5 REAL -100
+PARAMETER tempNorm_6 REAL -100
+PARAMETER tempNorm_7 REAL -100
+PARAMETER tempNorm_8 REAL -100
+PARAMETER tempNorm_9 REAL -100
+PARAMETER tempNorm_10 REAL -100
+PARAMETER tempNorm_11 REAL -100
+PARAMETER tempNorm_12 REAL -100
+PARAMETER tempNorm_13 REAL -100
+PARAMETER tempNorm_14 REAL -100
+PARAMETER tempNorm_15 REAL -100
+PARAMETER tempNorm_16 REAL -100
+PARAMETER tempNorm_17 REAL -100
+PARAMETER tempNorm_18 REAL -100
+PARAMETER tempNorm_19 REAL -100
+PARAMETER tempNorm_20 REAL -100
+
+D tempExp_ NKO: Exponents for piecewise polynomial fit
+D & (dimensionless). Up to 20 exponents available for
+D & each segment. Must have equal number of exponents
+D & to normalizations and 1 less than the number of
+D & boundaries. If <20 exponents used, leave as -100.
+D & Exponents must be used sequentially. 
+PARAMETER tempExp_1 REAL -100
+PARAMETER tempExp_2 REAL -100
+PARAMETER tempExp_3 REAL -100
+PARAMETER tempExp_4 REAL -100
+PARAMETER tempExp_5 REAL -100
+PARAMETER tempExp_6 REAL -100
+PARAMETER tempExp_7 REAL -100
+PARAMETER tempExp_8 REAL -100
+PARAMETER tempExp_9 REAL -100
+PARAMETER tempExp_10 REAL -100
+PARAMETER tempExp_11 REAL -100
+PARAMETER tempExp_12 REAL -100
+PARAMETER tempExp_13 REAL -100
+PARAMETER tempExp_14 REAL -100
+PARAMETER tempExp_15 REAL -100
+PARAMETER tempExp_16 REAL -100
+PARAMETER tempExp_17 REAL -100
+PARAMETER tempExp_18 REAL -100
+PARAMETER tempExp_19 REAL -100
+PARAMETER tempExp_20 REAL -100
