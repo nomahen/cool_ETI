@@ -1,0 +1,10 @@
+#########################
+## ETI Cooling Module  ##
+## Nicholas Kaaz 2019  ##
+#########################
+
+This is a FLASH 4.5 implementation of the exact time integration method for cooling functions from Townsend 2009. It uses a piecewise power law fit for the emissivity function. The choice of fit is set by the runtime parameter "coolMode", but currently the only valid entry for "coolMode" is "default", which implements the fit from Rosner et al 1978. The plan is to add functionality for "user", where the fit can be entered by hand, or "table" where it can be entered from a table. 
+
+To use this module, clone the git repository into your FLASHx.y/source/physics/sourceTerms/Cool/CoolMain directory. 
+
+If anyone wishes to use this or has questions, please let me know!
